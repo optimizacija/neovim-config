@@ -19,7 +19,7 @@ Plug 'Rip-Rip/clang_complete'
 " ale - linter / autocompletion / formatter
 Plug 'w0rp/ale'
 
-" auto formater
+" auto formatter
 Plug 'rhysd/vim-clang-format'
 
 " nerd tree
@@ -324,6 +324,8 @@ noremap <C-n> :NERDTreeToggle<CR>
 " quit nerd tree on file open
 let g:NERDTreeQuitOnOpen = 1
 
+" show nerd tree always on the right instead on the left
+let g:NERDTreeWinPos = "right"
 
 " ################ UltiSnips ########################
 
@@ -355,6 +357,10 @@ inoremap <C-l> <Up>
  
 " autocompletion
 let g:ale_completion_enabled = 0
+
+
+
+let g:ale_cpp_clang_executable = 'clang++-5.0'
 
 " linter
  let g:ale_linters = {
