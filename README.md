@@ -7,5 +7,5 @@ The goal of this configuration is to have a fulfilling C++ working environment. 
 * linter (syntax highlighting)
 * auto formatter
 * switching between header / source
-* directory treeview
+* directory tree view
 * miscellaneous (highlighting, motion and more)
