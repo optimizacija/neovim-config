@@ -10,7 +10,9 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes ''
  
 " autocomplete - deoplete 
-Plug 'Rip-Rip/clang_complete'
+"Plug 'Rip-Rip/clang_complete'
+
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 
 " autocomplete - roxma
 "Plug 'roxma/nvim-completion-manager'
@@ -71,6 +73,9 @@ Plug 'lokaltog/vim-distinguished'
 
 " glsl color
 Plug 'tikhomirov/vim-glsl'
+
+" debugger
+"Plug 'critiqjo/lldb.nvim'
 
 call plug#end()			
 
@@ -341,24 +346,38 @@ let g:UltiSnipsUsePythonVersion = 3
 
 " ################ Clang complete ###################
 
-let g:clang_library_path='/usr/lib/llvm-5.0/lib/libclang.so.1'
-let g:clang_auto_select = 1
+"let g:clang_use_library = 1
+"let g:clang_library_path='/usr/lib/llvm-5.0/lib/libclang.so.1'
+"let g:clang_periodic_quickfix=1
+"let g:clang_auto_select = 1
 
-let g:clang_snippets = 1
-let g:clang_snippets_engine = 'ultisnips'
+"let g:clang_snippets = 1
+"let g:clang_snippets_engine = 'ultisnips'
 
 " I don't know how to change the keybindings to navigate
 " the 'completion suggestions menu' with ctrl+k and ctrl+l
-inoremap <C-k> <Down>
-inoremap <C-l> <Up>
+"inoremap <C-k> <Down>
+"inoremap <C-l> <Up>
 
+
+" ################ YouCompleteMe ####################
+
+let g:ycm_key_list_select_completion = ['<C-k>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-l>', '<Up>']
+let g:SuperTabDefaulCompletionType = '<C-k>'
+
+" disable annoying ycm confirmation
+let g:ycm_confirm_extra_conf = 0
+
+" add path to ycm_extra_conf.py (you could also copy the file in the home folder)
+" delete '...98' argument from .ycm_extra_conf.py, otherwise syntastic does
+" not work properly
+let g:ycm_global_ycm_extra_conf = '~/.config/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
  
 " ################ Ale ##############################
  
 " autocompletion
-let g:ale_completion_enabled = 0
-
-
+let g:ale_completion_enabled = 1
 
 let g:ale_cpp_clang_executable = 'clang++-5.0'
 
@@ -366,7 +385,7 @@ let g:ale_cpp_clang_executable = 'clang++-5.0'
  let g:ale_linters = {
             \   'cpp': ['clang']
             \}
-let g:ale_cpp_clang_options = '-std=c++1z -O0 -Wextra -Wall -Wpedantic'
+let g:ale_cpp_clang_options = '-std=c++1z -O0 -Wextra -Wall -Wpedantic -I /usr/include/eigen3'
 "let g:ale_cpp_clangtidy_options = '-checks="cppcoreguidelines-*"'
 "let g:ale_cpp_cpplint_options = ''
 "let g:ale_cpp_gcc_options = ''
@@ -429,3 +448,4 @@ let g:indexer_disableCtagsWarning = 1
 
 " TODO: add (cmake) project support
 " TODO: add debugger support
+
