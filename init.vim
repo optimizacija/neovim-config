@@ -372,7 +372,8 @@ let g:ycm_confirm_extra_conf = 0
 " add path to ycm_extra_conf.py (you could also copy the file in the home folder)
 " delete '...98' argument from .ycm_extra_conf.py, otherwise syntastic does
 " not work properly
-let g:ycm_global_ycm_extra_conf = '~/.config/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '/home/jan/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
  
 " ################ Ale ##############################
  
