@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
 " autocomplete - deoplete 
 "Plug 'Rip-Rip/clang_complete'
 
+" autocompletion (also a linter - diagnostics)
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 
 " autocomplete - roxma
@@ -361,6 +362,8 @@ let g:UltiSnipsUsePythonVersion = 3
 
 
 " ################ YouCompleteMe ####################
+
+let g:ycm_show_diagnostics_ui = 0
 
 let g:ycm_key_list_select_completion = ['<C-k>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-l>', '<Up>']
