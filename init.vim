@@ -265,6 +265,8 @@ iab wieght weight
 iab hieght height
 iab tihs this
 iab mian main
+iab funciton function
+iab funcition function
 
 
 " ================ Misc =============================
