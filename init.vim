@@ -182,6 +182,11 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 noremap U <c-r>
 noremap <c-r> <NOP>
 
+" indent via Tab
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+vnoremap <Tab> >>_
+vnoremap <S-Tab> <<_
 
 " ================ Visualization ====================
  
