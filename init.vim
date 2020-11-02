@@ -7,17 +7,8 @@
 
 call plug#begin('~/.vim/plugged')
 
-" Make sure you use single quotes ''
- 
-" autocomplete - deoplete 
-"Plug 'Rip-Rip/clang_complete'
-
-" autocompletion (also a linter - diagnostics)
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
-
-" autocomplete - roxma
-"Plug 'roxma/nvim-completion-manager'
-"Plug 'roxma/ncm-clang'
+" fugitive - git support
+Plug 'tpope/vim-fugitive'
  
 " ale - linter / autocompletion / formatter
 Plug 'w0rp/ale'
@@ -34,9 +25,7 @@ Plug 'tpope/vim-surround'
 " nerd commenter
 Plug 'scrooloose/nerdcommenter'
 
-" airline (powerline)
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 
 " enhanced highlight
 Plug 'octol/vim-cpp-enhanced-highlight'
@@ -45,9 +34,6 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-scripts/DfrankUtil'
 Plug 'vim-scripts/vimprj'
 Plug 'vim-scripts/indexer.tar.gz'
-
-" UltiSnips
-Plug 'SirVer/ultisnips'
 
 " easy motion
 Plug 'easymotion/vim-easymotion'
@@ -64,10 +50,6 @@ Plug 'w0ng/vim-hybrid'
 Plug 'tpope/vim-vividchalk'
 Plug 'lokaltog/vim-distinguished'
 
-" auto-close (for parenthesis)
-" TODO: broken, since clang_complete
-"Plug 'jiangmiao/auto-pairs'
-
 " ctrlp
 " TODO: learn
 " Plug 'kien/ctrlp.vim'
@@ -75,8 +57,7 @@ Plug 'lokaltog/vim-distinguished'
 " glsl color
 Plug 'tikhomirov/vim-glsl'
 
-" debugger
-"Plug 'critiqjo/lldb.nvim'
+Plug 'drewtempelmeyer/palenight.vim'
 
 call plug#end()			
 
@@ -135,6 +116,8 @@ endif
 let mapleader = ','
 
 " clipboard
+set clipboard=unnamedplus
+
 " copy
 noremap <C-c> "+y
 " paste
@@ -190,12 +173,25 @@ vnoremap <S-Tab> <<_
 
 " ================ Visualization ====================
  
+" enable true colors
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+ 
 syntax on
 set background=dark
-colorscheme hybrid
 
-" enable 256bit colors - also: override gnome-terminal's settings
-set t_Co=256
+colorscheme palenight
+let g:lightline = { 'colorscheme': 'palenight' }
+let g:airline_theme = "palenight"
+ 
+" turn on italics
+let g:palenight_terminal_italics=1
 
 
 " ================ Indentation ======================
@@ -304,27 +300,60 @@ set completeopt-=preview
 " ================ Plugins ==========================
 
 " ################ Airline ##########################
+" Replaced with lightline
 
-" vim airline fonts
-if !exists('g:airline_symbols')
-	let g:airline_symbols= {}
-endif
+"" vim airline fonts
+"if !exists('g:airline_symbols')
+	"let g:airline_symbols= {}
+"endif
 
-" unicode symbols
-let g:airline_left_alt_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.linenr = ''
-let g:airline_symbols.maxlinenr = '☰'
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.spell = 'Ꞩ'
-let g:airline_symbols.notexists = '∄'
-let g:airline_symbols.whitespace = 'Ξ'
-let g:airline_powerline_fonts = 1
+"" unicode symbols
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_alt_sep = ''
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_symbols.crypt = '🔒'
+"let g:airline_symbols.linenr = ''
+"let g:airline_symbols.maxlinenr = '☰'
+"let g:airline_symbols.branch = ''
+"let g:airline_symbols.readonly = ''
+"let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.spell = 'Ꞩ'
+"let g:airline_symbols.notexists = '∄'
+"let g:airline_symbols.whitespace = 'Ξ'
+"let g:airline_powerline_fonts = 1
+
+ 
+" ################ Lightline ########################
+ 
+" # lightline
+ let g:lightline = {
+  \   'colorscheme': 'palenight',
+  \   'active': {
+  \     'left':[ [ 'mode', 'paste' ],
+  \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+  \     ]
+  \   },
+	\   'component': {
+	\     'lineinfo': '%3l:%-2v',
+	\   },
+  \   'component_function': {
+  \     'gitbranch': 'fugitive#head',
+  \   }
+  \ }
+let g:lightline.separator = {
+	\   'left': '', 'right': ''
+  \}
+let g:lightline.subseparator = {
+	\   'left': '', 'right': ''
+  \}
+
+let g:lightline.tabline = {
+  \   'left': [ ['tabs'] ],
+  \   'right': [ ['close'] ]
+  \ }
+set showtabline=2  " Show tabline
+set guioptions-=e  " Don't use GUI tabline
 
 
 " ################ NERDTree #########################
