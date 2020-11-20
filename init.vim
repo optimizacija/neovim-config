@@ -9,53 +9,25 @@ call plug#begin('~/.vim/plugged')
 
 " fugitive - git support
 Plug 'tpope/vim-fugitive'
- 
-" ale - linter / autocompletion / formatter
-Plug 'w0rp/ale'
-
-" auto formatter
-Plug 'rhysd/vim-clang-format'
-
-" nerd tree
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " surround vim
 Plug 'tpope/vim-surround'
 
+" nerd tree
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
 " nerd commenter
 Plug 'scrooloose/nerdcommenter'
 
+" status line
 Plug 'itchyny/lightline.vim'
-
-" enhanced highlight
-Plug 'octol/vim-cpp-enhanced-highlight'
-
-" ctags indexer
-Plug 'vim-scripts/DfrankUtil'
-Plug 'vim-scripts/vimprj'
-Plug 'vim-scripts/indexer.tar.gz'
 
 " easy motion
 Plug 'easymotion/vim-easymotion'
 
-" A - for switching between source and header files
-Plug 'vim-scripts/a.vim'
-
-" colorscheme
-"Plug 'wombat256mod.vim'
-Plug 'nanotech/jellybeans.vim'
-Plug 'chriskempson/base16-vim'
-Plug 'morhetz/gruvbox'
-Plug 'w0ng/vim-hybrid'
-Plug 'tpope/vim-vividchalk'
-Plug 'lokaltog/vim-distinguished'
-
 " ctrlp
 " TODO: learn
 " Plug 'kien/ctrlp.vim'
-
-" glsl color
-Plug 'tikhomirov/vim-glsl'
 
 Plug 'drewtempelmeyer/palenight.vim'
 
@@ -289,39 +261,15 @@ set backspace=indent,eol,start
 " to avoid hitting:
 " 'press ENTER or type command to continue'
 " add 'silent' keyword before the command
-" 
-" open a gnome-terminal with a shortcut
-noremap <leader><CR> :silent !gnome-terminal<CR>
+ 
+" open a terminal with a shortcut
+noremap <leader><CR> :silent !$TERM<CR>
 
 "disable preview window
 set completeopt-=preview
 
 
 " ================ Plugins ==========================
-
-" ################ Airline ##########################
-" Replaced with lightline
-
-"" vim airline fonts
-"if !exists('g:airline_symbols')
-	"let g:airline_symbols= {}
-"endif
-
-"" unicode symbols
-"let g:airline_left_alt_sep = ''
-"let g:airline_right_alt_sep = ''
-"let g:airline_left_sep = ''
-"let g:airline_right_sep = ''
-"let g:airline_symbols.crypt = '🔒'
-"let g:airline_symbols.linenr = ''
-"let g:airline_symbols.maxlinenr = '☰'
-"let g:airline_symbols.branch = ''
-"let g:airline_symbols.readonly = ''
-"let g:airline_symbols.paste = 'ρ'
-"let g:airline_symbols.spell = 'Ꞩ'
-"let g:airline_symbols.notexists = '∄'
-"let g:airline_symbols.whitespace = 'Ξ'
-"let g:airline_powerline_fonts = 1
 
  
 " ################ Lightline ########################
@@ -334,9 +282,9 @@ set completeopt-=preview
   \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
   \     ]
   \   },
-	\   'component': {
-	\     'lineinfo': '%3l:%-2v',
-	\   },
+  \   'component': {
+  \     'lineinfo': '%3l:%-2v',
+  \   },
   \   'component_function': {
   \     'gitbranch': 'fugitive#head',
   \   }
@@ -357,113 +305,18 @@ set guioptions-=e  " Don't use GUI tabline
 
 
 " ################ NERDTree #########################
- 
-" shift+i (show hidden files)
- 
+
 " ctrl+n open/closes nerd tree
 noremap <C-n> :NERDTreeToggle<CR>
 
 " quit nerd tree on file open
 let g:NERDTreeQuitOnOpen = 1
+ 
+" shift+i (show/hide dotfiles)
+let g:NERDTreeShowHidden = 1
 
 " show nerd tree always on the right instead on the left
 let g:NERDTreeWinPos = "right"
-
-" ################ UltiSnips ########################
-
-" make a dir Ultisnips in: '~/.config/nvim/UltiSnips/'
-" and put your snippets in there
-" eg. cpp.snippets
-
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-let g:UltiSnipsUsePythonVersion = 3
-
-
-" ################ Clang complete ###################
-
-"let g:clang_use_library = 1
-"let g:clang_library_path='/usr/lib/llvm-5.0/lib/libclang.so.1'
-"let g:clang_periodic_quickfix=1
-"let g:clang_auto_select = 1
-
-"let g:clang_snippets = 1
-"let g:clang_snippets_engine = 'ultisnips'
-
-" I don't know how to change the keybindings to navigate
-" the 'completion suggestions menu' with ctrl+k and ctrl+l
-"inoremap <C-k> <Down>
-"inoremap <C-l> <Up>
-
-
-" ################ YouCompleteMe ####################
-
-let g:ycm_show_diagnostics_ui = 0
-
-let g:ycm_key_list_select_completion = ['<C-k>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-l>', '<Up>']
-let g:SuperTabDefaulCompletionType = '<C-k>'
-
-" disable annoying ycm confirmation
-let g:ycm_confirm_extra_conf = 0
-
-" add path to ycm_extra_conf.py (you could also copy the file in the home folder)
-" delete '...98' argument from .ycm_extra_conf.py, otherwise syntastic does
-" not work properly
-let g:ycm_global_ycm_extra_conf = '/home/jan/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-
- 
-" ################ Ale ##############################
- 
-" autocompletion
-let g:ale_completion_enabled = 1
-
-let g:ale_cpp_clang_executable = 'clang++-5.0'
-
-" linter
- let g:ale_linters = {
-            \   'cpp': ['clang']
-            \}
-let g:ale_cpp_clang_options = '-std=c++1z -O0 -Wextra -Wall -Wpedantic -I /usr/include/eigen3'
-"let g:ale_cpp_clangtidy_options = '-checks="cppcoreguidelines-*"'
-"let g:ale_cpp_cpplint_options = ''
-"let g:ale_cpp_gcc_options = ''
-"let g:ale_cpp_clangcheck_options = ''
-"let g:ale_cpp_cppcheck_options = ''
-
-
-" ################ Clang format #####################
- 
-" Clang format - auto formatting
- 
-let g:clang_format#command = 'clang-format-3.8'
-let g:clang_format#style_options = {
-            \ "BreakBeforeBraces" : "Attach",
-            \ "UseTab" : "Never",
-            \ "IndentWidth" : 4,
-            \ "ColumnLimit" : 100,
-            \ "AccessModifierOffset" : -4,
-            \ "AllowShortIfStatementsOnASingleLine" : "false",
-            \ "AllowShortFunctionsOnASingleLine" : "false",
-            \}
-
-" shortcuts for autoformatting the entire file: Ctrl+j
-inoremap <C-j> <Esc>:ClangFormat<CR>a
-nnoremap <C-j> <Esc>:ClangFormat<CR>
-
-
-" ################ A ################################
- 
-" A - switching between files
- 
-" header / source
-nnoremap <F4> :A<CR>
-inoremap <F4> <ESC>:A<CR>a
-
-" file under cursor
-nnoremap <F2> :IH<CR>
-inoremap <F2> <ESC>:IH<CR>
 
 
 " ################ Easymotion #######################
@@ -473,19 +326,3 @@ map <leader><leader>j <Plug>(easymotion-linebackward)
 map <leader><leader>k <Plug>(easymotion-j)
 map <leader><leader>l <Plug>(easymotion-k)
 map <leader><leader>č <Plug>(easymotion-lineforward)
-
-
-" ################ CTAGS ############################
- 
-" TODO: learn more about this plugin and improve it
- 
-" change the stack pop to a more comfortable mapping
-nnoremap <C-e> <C-]>
-
-" CTAGS indexer
-let g:indexer_disableCtagsWarning = 1
-
-
-" TODO: add (cmake) project support
-" TODO: add debugger support
-

@@ -1,11 +1,6 @@
-# neovim configuration for c++ development
+# Personal NeoVim config
 
-init.vim should work out of the box.
+init.vim should work out of the box, just put it in your `.config/nvim/` folder.
 
-## Features
-* autocompletion 
-* linter (syntax highlighting)
-* auto formatter
-* switching between header / source
-* directory tree view
-* miscellaneous (highlighting, motion and more)
+This new branch focuses on supporting web languages (HTML, CSS, JavaScript, TypeScript) and possibly
+some frameworks such as Angular & NestJS.
