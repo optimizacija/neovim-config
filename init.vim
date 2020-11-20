@@ -263,7 +263,7 @@ set backspace=indent,eol,start
 " add 'silent' keyword before the command
  
 " open a terminal with a shortcut
-noremap <leader><CR> :silent !$TERM<CR>
+noremap <leader><CR> :silent !$TERM &<CR>
 
 "disable preview window
 set completeopt-=preview
