@@ -13,8 +13,8 @@ Plug 'tpope/vim-fugitive'
 " surround vim
 Plug 'tpope/vim-surround'
 
-" nerd tree
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" chad tree
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
 
 " nerd commenter
 Plug 'scrooloose/nerdcommenter'
@@ -26,10 +26,13 @@ Plug 'itchyny/lightline.vim'
 Plug 'easymotion/vim-easymotion'
 
 " ctrlp
-" TODO: learn
-" Plug 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 
+" colorscheme
 Plug 'drewtempelmeyer/palenight.vim'
+
+" startify
+Plug 'mhinz/vim-startify'
 
 call plug#end()			
 
@@ -143,6 +146,12 @@ nnoremap <S-Tab> <<_
 vnoremap <Tab> >>_
 vnoremap <S-Tab> <<_
 
+" window movement
+noremap <c-w>j <c-w>h
+noremap <c-w>k <c-w>j
+noremap <c-w>l <c-w>k
+noremap <c-w>č <c-w>l
+
 " ================ Visualization ====================
  
 " enable true colors
@@ -170,8 +179,8 @@ let g:palenight_terminal_italics=1
 
 set autoindent
 set smartindent
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set smarttab
 set expandtab
 
@@ -304,19 +313,9 @@ set showtabline=2  " Show tabline
 set guioptions-=e  " Don't use GUI tabline
 
 
-" ################ NERDTree #########################
+" ################ ChadTree #########################
 
-" ctrl+n open/closes nerd tree
-noremap <C-n> :NERDTreeToggle<CR>
-
-" quit nerd tree on file open
-let g:NERDTreeQuitOnOpen = 1
- 
-" shift+i (show/hide dotfiles)
-let g:NERDTreeShowHidden = 1
-
-" show nerd tree always on the right instead on the left
-let g:NERDTreeWinPos = "right"
+noremap <C-n> :CHADopen<CR>
 
 
 " ################ Easymotion #######################
@@ -326,3 +325,10 @@ map <leader><leader>j <Plug>(easymotion-linebackward)
 map <leader><leader>k <Plug>(easymotion-j)
 map <leader><leader>l <Plug>(easymotion-k)
 map <leader><leader>č <Plug>(easymotion-lineforward)
+
+" ################ CtrlP ############################
+ 
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\.git\|dist$\|node_modules$'
+\ }
+
