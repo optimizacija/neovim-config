@@ -1,5 +1,27 @@
 -- ################# Basic settings ################ --
 
+-- ================= File management ================= --
+
+vim.bo.swapfile = false
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.autoread = true -- auto file change detection
+
+-- TODO
+--[[
+" Triger `autoread` when files changes on disk
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+" Notification after file change
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+--]]
+
+
+-- ================= Scrolling ================= --
+
+vim.o.scrolloff = 8 -- start scrolling when 8 lines away from margins
+
+
 -- ================= Visualization ================= --
 
 if vim.fn.has('termguicolors') == 1 then
