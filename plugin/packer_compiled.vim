@@ -32,14 +32,6 @@ local function try_loadstring(s, component, name)
 end
 
 _G.packer_plugins = {
-  chadtree = {
-    loaded = true,
-    path = "/home/jan/.local/share/nvim/site/pack/packer/start/chadtree"
-  },
-  ["ctrlp.vim"] = {
-    loaded = true,
-    path = "/home/jan/.local/share/nvim/site/pack/packer/start/ctrlp.vim"
-  },
   ["lightline.vim"] = {
     loaded = true,
     path = "/home/jan/.local/share/nvim/site/pack/packer/start/lightline.vim"
@@ -55,10 +47,6 @@ _G.packer_plugins = {
   ["palenight.vim"] = {
     loaded = true,
     path = "/home/jan/.local/share/nvim/site/pack/packer/start/palenight.vim"
-  },
-  ["vim-easymotion"] = {
-    loaded = true,
-    path = "/home/jan/.local/share/nvim/site/pack/packer/start/vim-easymotion"
   },
   ["vim-fugitive"] = {
     loaded = true,
