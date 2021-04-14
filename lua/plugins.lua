@@ -12,33 +12,21 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- fugitive - git support
+  -- colorscheme
+  use 'drewtempelmeyer/palenight.vim'
+
+  -- git integration
   use 'tpope/vim-fugitive'
 
   -- surround vim
   use 'tpope/vim-surround'
-
-  -- chad tree
-  use { 
-    'ms-jpq/chadtree',
-    branch = 'chad',
-  }
-
+	
   -- nerd commenter
-  use 'scrooloose/nerdcommenter'
+	use 'scrooloose/nerdcommenter'
 
   -- status line
   use 'itchyny/lightline.vim'
 
-  -- easy motion
-  use 'easymotion/vim-easymotion'
-
-  -- ctrlp
-  use 'kien/ctrlp.vim'
-
-  -- colorscheme
-  use 'drewtempelmeyer/palenight.vim'
-
-  -- startify
+  -- show recent files on empty nvim command
   use 'mhinz/vim-startify'
 end)
