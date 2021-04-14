@@ -7,14 +7,14 @@ vim.o.backup = false
 vim.o.writebackup = false
 vim.o.autoread = true -- auto file change detection
 
--- TODO
---[[
+-- autocmds are currently not supported by nvim (0.5 nighlty)
+vim.api.nvim_command([[
 " Triger `autoread` when files changes on disk
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
 " Notification after file change
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
---]]
+]])
 
 
 -- ================= Scrolling ================= --
@@ -55,9 +55,9 @@ vim.o.smarttab = true 	  -- tab infront of a line inserts blanks based on shiftw
 
 vim.wo.number = true -- see the number column
 
--- TODO
+-- autocmds are currently not supported by nvim (0.5 nighlty)
 -- Toggle relative numbering, and set to absolute on loss of focus or insert mode
---[[
+vim.api.nvim_command([[
 autocmd InsertEnter * :set nornu
 autocmd InsertLeave * :set rnu
 autocmd BufLeave * :set nornu
@@ -67,7 +67,7 @@ function! SetRNU()
         set rnu 
     endif
 endfunction
---]]
+]])
 
 
 -- ================= Search ================= --
