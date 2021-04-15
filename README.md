@@ -1,4 +1,4 @@
-Hi There Fellow Dev!
+Hi there!
 
 I'm slowly working towards porting this entire nvim config to lua (on branch `version-2`).
 
