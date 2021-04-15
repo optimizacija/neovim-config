@@ -8,6 +8,7 @@ LSPs should & will make it easier to support more programming languages (autocom
 This will help me support more languages, other than just C++. Which is one of the things that I've struggled with in the current setup.
 
 Don't want to wait?
+
 You don't have to. If you're looking for an already rich nvim IDE-like environment be sure to checkout this awesome project [LunarVim](https://github.com/ChristianChiarulli/LunarVim).
 
 -----
