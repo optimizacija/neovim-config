@@ -9,7 +9,7 @@ This will help me support more languages, other than just C++. Which is one of t
 
 Don't want to wait?
 
-You don't have to. If you're looking for an already rich nvim IDE-like environment be sure to checkout this awesome project [LunarVim](https://github.com/ChristianChiarulli/LunarVim).
+You don't have to. If you're looking for an already rich nvim IDE-like experience be sure to checkout this awesome project [LunarVim](https://github.com/ChristianChiarulli/LunarVim).
 
 -----
 
