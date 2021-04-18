@@ -30,8 +30,11 @@ return require('packer').startup(function()
   -- show recent files on empty nvim command
   use 'mhinz/vim-startify'
 
-  -- lsp sconfig
+  -- lsp config
   use 'neovim/nvim-lspconfig'
-  -- 
-  -- TODO fuzzy file search
+	
+	-- for installing LSP servers within nvim
+	use 'kabouzeid/nvim-lspinstall'
+
+  -- TODO fuzzy file search, chadtree etc
 end)
