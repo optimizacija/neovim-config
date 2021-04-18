@@ -1,6 +1,9 @@
 # Personal NeoVim config
 
-init.vim should work out of the box, just put it in your `.config/nvim/` folder.
+## TODOS
+- better lsp support & keymappings
+- code navigation plugins (tree, fuzzy search & others)
+- git integration (color changed/deleted lines)
+- tryout https://github.com/nvim-treesitter/nvim-treesitter
+- auto install packages in nvim config path, don't rely on global installs (lsp clients)
 
-This new branch focuses on supporting web languages (HTML, CSS, JavaScript, TypeScript) and possibly
-some frameworks such as Angular & NestJS.

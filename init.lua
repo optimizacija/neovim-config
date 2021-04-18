@@ -1,5 +1,5 @@
+require('globals')
 require('plugins')
-require('keymappings')
+require('lsp-wrapper')
 require('basics')
-
--- todo: tabs (buffer) mappings <S-j> & <S-č>
+require('keymappings')

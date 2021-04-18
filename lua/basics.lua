@@ -55,8 +55,10 @@ vim.o.smarttab = true 	  -- tab infront of a line inserts blanks based on shiftw
 
 vim.wo.number = true -- see the number column
 
+-- TODO fix
 -- autocmds are currently not supported by nvim (0.5 nighlty)
 -- Toggle relative numbering, and set to absolute on loss of focus or insert mode
+--[[
 vim.api.nvim_command([[
 autocmd InsertEnter * :set nornu
 autocmd InsertLeave * :set rnu
@@ -67,7 +69,8 @@ function! SetRNU()
         set rnu 
     endif
 endfunction
-]])
+]]
+--]]
 
 
 -- ================= Search ================= --
@@ -89,3 +92,4 @@ vim.o.ttimeoutlen = 10  -- ms to wait for a key code seq to complete
 
 vim.wo.wrap = false -- don't wrap long text into multiple lines
 vim.o.history = 10000 -- numbers of entries in history for ':' commands and search patterns (10000 = max)
+
