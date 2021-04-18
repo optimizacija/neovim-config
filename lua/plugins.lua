@@ -29,4 +29,9 @@ return require('packer').startup(function()
 
   -- show recent files on empty nvim command
   use 'mhinz/vim-startify'
+
+  -- lsp sconfig
+  use 'neovim/nvim-lspconfig'
+  -- 
+  -- TODO fuzzy file search
 end)

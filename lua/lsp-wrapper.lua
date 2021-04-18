@@ -1,0 +1,6 @@
+require('lsp/bash')
+require('lsp/css')
+require('lsp/docker')
+require('lsp/json')
+require('lsp/tsserver')
+require('lsp/pyright')
