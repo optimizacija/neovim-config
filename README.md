@@ -2,7 +2,6 @@
 
 ## TODOS
 - better lsp support & keymappings
-- lsp autocomplete (compe?)
 - code navigation plugins (tree, fuzzy search & others)
 - git integration (color changed/deleted lines)
 - tryout https://github.com/nvim-treesitter/nvim-treesitter
