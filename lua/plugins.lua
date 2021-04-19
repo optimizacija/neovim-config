@@ -8,7 +8,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute 'packadd packer.nvim'
 end
 
-return require('packer').startup(function()
+local packer = require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
@@ -35,6 +35,14 @@ return require('packer').startup(function()
 	
 	-- for installing LSP servers within nvim
 	use 'kabouzeid/nvim-lspinstall'
+	
+	-- for LSP autocompletion
+	use 'hrsh7th/nvim-compe'
 
   -- TODO fuzzy file search, chadtree etc
 end)
+
+-- plugin specifi configs go here
+require('plugin-config/nvim-compe')
+
+return packer
