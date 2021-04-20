@@ -1,5 +1,10 @@
 -- ################# Basic settings ################ --
 
+-- ================= Holy leader key ================= --
+
+vim.g.mapleader = ','
+
+
 -- ================= File management ================= --
 
 vim.bo.swapfile = false
@@ -28,7 +33,7 @@ if vim.fn.has('termguicolors') == 1 then
   vim.o.termguicolors = true
 end
 
--- check what this does
+-- TODO check what this does
 vim.o.syntax = 'on'
 vim.o.background = 'dark'
 
@@ -54,23 +59,6 @@ vim.o.smarttab = true 	  -- tab infront of a line inserts blanks based on shiftw
 -- ================= Number column ================= --
 
 vim.wo.number = true -- see the number column
-
--- TODO fix
--- autocmds are currently not supported by nvim (0.5 nighlty)
--- Toggle relative numbering, and set to absolute on loss of focus or insert mode
---[[
-vim.api.nvim_command([[
-autocmd InsertEnter * :set nornu
-autocmd InsertLeave * :set rnu
-autocmd BufLeave * :set nornu
-autocmd BufEnter * call SetRNU()
-function! SetRNU()
-    if(mode()!='i')
-        set rnu 
-    endif
-endfunction
-]]
---]]
 
 
 -- ================= Search ================= --
