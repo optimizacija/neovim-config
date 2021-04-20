@@ -1,5 +1,5 @@
-require('globals')
-require('plugins')
-require('lsp-wrapper')
 require('basics')
+require('globals')
 require('keymappings')
+require('lsp-wrapper')
+require('plugins')

@@ -1,9 +1,6 @@
 -- defaults
 opts = { noremap = true, silent = true }
 
--- leader key
-vim.g.mapleader = ','
-
 -- copy
 vim.api.nvim_set_keymap('', '<C-c>', '"+y', opts)
 -- paste
