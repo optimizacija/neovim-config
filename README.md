@@ -11,11 +11,12 @@ favorite font for the usual text. Or do something similar.
 
 
 ## TODOS
-- better lsp support & keymappings
 - git integration (color changed/deleted lines)
-- try running LSPInstall in packer 
+- try running LSPInstall in packer
  - example
  -	   -- Treesitter
  -     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
 - DAP https://github.com/mfussenegger/nvim-dap
-- better tab support
+- better tab support - opening, closing, reusing tabs
+- fix tabstop & numberline
+- autocomplete top suggestions using only Enter instead of Down + Enter
