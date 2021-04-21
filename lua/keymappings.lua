@@ -1,5 +1,5 @@
 -- defaults
-opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = true }
 
 -- copy
 vim.api.nvim_set_keymap('', '<C-c>', '"+y', opts)

@@ -46,6 +46,12 @@ local packer = require('packer').startup(function()
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}, {'livegrep/livegrep'}}
   }
 
+  -- better hotfix window (for showing and searching through results in telescope's find usages)
+  use {"kevinhwang91/nvim-bqf"}
+
+  -- better highlighting
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+
   -- requires
   -- TODO: fix file icons
   use 'kyazdani42/nvim-web-devicons' -- for file icons
@@ -56,5 +62,6 @@ end)
 require('plugin-config/nvim-compe')
 require('plugin-config/telescope')
 require('plugin-config/nvim-tree')
+require('plugin-config/nvim-treesitter')
 
 return packer
