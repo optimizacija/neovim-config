@@ -1,13 +1,14 @@
 # Personal NeoVim config
 
 ## Icons
-Icons are used mainly within nvim-tree plugin. The neovim plugin for icons is already a part of this project.
-But your terminal still needs to be able to render the correct font that includes those icons.
+Icons are mainly used by `nvim-tree` plugin. The plugin for icons is already installed by this config.
+But your terminal still needs to be able to render the icon font.
 
-Install one of the many icon fonts listed [here](https://www.nerdfonts.com/). Just follow their instructions for your specific OS.
-After you have successfully installed one version of the nerd font, set your terminal to use those icon fonts. 
-Any reasonable terminal should allow you to selectively set your icon font only for the non-ascii characters, while keeping your 
-favorite font for the usual text. Or do something similar.
+### Installing Icon fonts
+
+Install one of the icon fonts listed [here](https://www.nerdfonts.com/). Just follow their instructions for your specific OS.
+After you have successfully installed it, you still have to configure your terminal to start using the new font. 
+Any reasonable terminal should allow you to enable the new icon font only for certain set of (non-ascii) characters. 
 
 
 ## TODOS
