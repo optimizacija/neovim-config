@@ -19,4 +19,3 @@ favorite font for the usual text. Or do something similar.
 - DAP https://github.com/mfussenegger/nvim-dap
 - better tab support - opening, closing, reusing tabs
 - fix tabstop & numberline
-- autocomplete top suggestions using only Enter instead of Down + Enter
