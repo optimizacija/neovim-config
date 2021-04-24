@@ -48,21 +48,26 @@ vim.api.nvim_command('let g:palenight_terminal_italics=1')
 -- pay attention to 'vim.bo' (buffer local options) and 'vim.o' (global options)
 -- see :help options.txt
 
-vim.bo.tabstop = 2 	  -- maximum width of tab character (measured in spaces)
-vim.bo.shiftwidth = 2 	  -- size of indent (measured in spaces), should equal tabstop
-vim.bo.softtabstop = 2 	  -- should be the same as the other two above
-vim.bo.smartindent = true -- smart indenting on new line for C-like programs
-vim.bo.autoindent = true  -- copy the indentation from previous line
+-- for some reason these values need to be set in both o and bo objects
+vim.o.tabstop = 2					-- maximum width of tab character (measured in spaces)
+vim.bo.tabstop = 2
+vim.o.shiftwidth = 2 	    -- size of indent (measured in spaces), should equal tabstop
+vim.bo.shiftwidth = 2
+vim.o.softtabstop = 2 	  -- should be the same as the other two above
+vim.bo.softtabstop = 2
+vim.o.smartindent = true  -- smart indenting on new line for C-like programs
+vim.bo.smartindent = true
+vim.o.autoindent = true   -- copy the indentation from previous line
+vim.bo.autoindent = true
 vim.o.smarttab = true 	  -- tab infront of a line inserts blanks based on shiftwidth
 
 
 -- ================= Number column ================= --
 
-vim.wo.number = true -- see the number column
+vim.wo.number = true
 
 
 -- ================= Search ================= --
-
 
 vim.o.ignorecase = true -- Ignorecase when searching
 vim.o.incsearch = true	-- start searching on each keystroke
