@@ -15,6 +15,6 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 - git integration (color changed/deleted lines)
 - try running LSPInstall in packer
 - DAP https://github.com/mfussenegger/nvim-dap
-- better tab support - opening, closing, reusing tabs
 - fix numberline
 - fix swapfiles
+- improve icons & colors for diagnostics
