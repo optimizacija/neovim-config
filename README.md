@@ -19,6 +19,8 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 - fix swapfiles
 - improve icons & colors for diagnostics
 - fix lightline (use galaxy line/lualine?)
-- indent lines?
+- add ignore files to indent lines 
 - add whichkey 
 - fix colorscheme
+- fix barbar's need to save 
+- just fix tab management in general

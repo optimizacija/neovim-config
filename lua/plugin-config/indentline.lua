@@ -1,0 +1,2 @@
+-- TODO: add ignore files for indent lines
+-- vim.api.nvim_command('let g:indentLine_char = "▏"')
