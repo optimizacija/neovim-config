@@ -18,5 +18,5 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 - fix numberline
 - fix swapfiles
 - improve icons & colors for diagnostics
-- fix lightline (use galaxy line?)
+- fix lightline (use galaxy line/lualine?)
 - indent lines?

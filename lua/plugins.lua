@@ -75,5 +75,4 @@ require('plugin-config/barbar')
 require('plugin-config/lsp-colors')
 require('plugin-config/lsp-trouble')
 
-
 return packer
