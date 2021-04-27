@@ -20,7 +20,7 @@ local packer = require('packer').startup(function()
 
   -- surround vim
   use 'tpope/vim-surround'
-	
+  
   -- nerd commenter
   use 'scrooloose/nerdcommenter'
 
@@ -33,7 +33,7 @@ local packer = require('packer').startup(function()
 
   -- lsp config
   use 'neovim/nvim-lspconfig'
-	
+  
   -- for installing LSP servers within nvim
   use 'kabouzeid/nvim-lspinstall'
 
@@ -52,12 +52,18 @@ local packer = require('packer').startup(function()
   -- better highlighting
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
-  -- requires
-  use 'kyazdani42/nvim-web-devicons' -- for file icons
+  -- nvim & icons for nvim
+  use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
+  
+  -- prettier tabs
+  use 'romgrk/barbar.nvim'
 
-	-- prettier tabs
-	use 'romgrk/barbar.nvim'
+  -- nice diagnostic pane on the bottom
+  use 'folke/lsp-trouble.nvim'
+
+  -- support the missing lsp diagnostic colors
+  use 'folke/lsp-colors.nvim'
 end)
 
 -- plugin specific configs go here
@@ -66,5 +72,8 @@ require('plugin-config/telescope')
 require('plugin-config/nvim-tree')
 require('plugin-config/nvim-treesitter')
 require('plugin-config/barbar')
+require('plugin-config/lsp-colors')
+require('plugin-config/lsp-trouble')
+
 
 return packer
