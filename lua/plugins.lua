@@ -53,9 +53,11 @@ local packer = require('packer').startup(function()
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
   -- requires
-  -- TODO: fix file icons
   use 'kyazdani42/nvim-web-devicons' -- for file icons
   use 'kyazdani42/nvim-tree.lua'
+
+	-- prettier tabs
+	use 'romgrk/barbar.nvim'
 end)
 
 -- plugin specific configs go here
@@ -63,5 +65,6 @@ require('plugin-config/nvim-compe')
 require('plugin-config/telescope')
 require('plugin-config/nvim-tree')
 require('plugin-config/nvim-treesitter')
+require('plugin-config/barbar')
 
 return packer

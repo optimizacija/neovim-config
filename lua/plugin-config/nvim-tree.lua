@@ -26,4 +26,5 @@ vim.g.nvim_tree_bindings = {
 }
 
 vim.g.nvim_tree_auto_close = 1 -- close tree when it's the last window
-vim.g.nvim_tree_tab_open = 1 -- open tree when entering new tab and the tree was previously open
+-- TODO: fix - this overwrites showing window numbers to false
+-- vim.g.nvim_tree_tab_open = 1 -- open tree when entering new tab and the tree was previously open

@@ -61,13 +61,6 @@ vim.api.nvim_set_keymap('', '<C-w>k', '<C-w>j', opts)
 vim.api.nvim_set_keymap('', '<C-w>l', '<C-w>k', opts)
 vim.api.nvim_set_keymap('', '<C-w>č', '<C-w>l', opts)
 
--- tab movement
-vim.api.nvim_set_keymap('', 'J', '<Cmd>tabprev<CR>', opts)
-vim.api.nvim_set_keymap('', 'Č', '<Cmd>tabnext<CR>', opts)
--- open empty tab
-vim.api.nvim_set_keymap('', 'T', '<Cmd>tabe<CR>', opts)
-vim.api.nvim_set_keymap('', 'X', '<Cmd>tabclose<CR>', opts)
-
 -- opening terminal with shortcut
 vim.api.nvim_set_keymap('', '<Leader><CR>', '<Cmd>silent !$TERM &<CR>', opts)
 
