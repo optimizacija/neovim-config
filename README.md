@@ -20,3 +20,5 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 - improve icons & colors for diagnostics
 - fix lightline (use galaxy line/lualine?)
 - indent lines?
+- add whichkey 
+- fix colorscheme
