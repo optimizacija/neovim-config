@@ -14,10 +14,6 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 ## TODOS
 - git integration (color changed/deleted lines)
 - try running LSPInstall in packer
- - example
- -	   -- Treesitter
- -     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
 - DAP https://github.com/mfussenegger/nvim-dap
 - better tab support - opening, closing, reusing tabs
-- fix tabstop & numberline
-- fix basic settings
+- fix numberline
