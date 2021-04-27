@@ -9,7 +9,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 local packer = require('packer').startup(function()
-  -- Packer can manage itself
+  -- Packer should manage itself
   use 'wbthomason/packer.nvim'
 
   -- colorscheme
@@ -28,6 +28,8 @@ local packer = require('packer').startup(function()
   -- status line
   -- TODO: try out galaxy line / lualine
   use 'itchyny/lightline.vim'
+	-- use 'hoob3rt/lualine.nvim'
+	-- use 'glepnir/galaxyline.nvim'
 
   -- show recent files on empty nvim command
   use 'mhinz/vim-startify'
@@ -70,6 +72,8 @@ local packer = require('packer').startup(function()
   use 'glepnir/lspsaga.nvim'
   
   -- TODO: indent blank lightlin lukas-reineke/indent-blankline.nvim
+	-- use 'lukas-reineke/indent-blankline.nvim'
+	-- use 'Yggdroot/indentLine'
 end)
 
 -- plugin specific configs go here
@@ -81,5 +85,6 @@ require('plugin-config/barbar')
 require('plugin-config/lsp-colors')
 require('plugin-config/lsp-trouble')
 require('plugin-config/lspsaga')
+require('plugin-config/indentline') -- TODO
 
 return packer
