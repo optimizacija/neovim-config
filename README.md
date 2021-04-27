@@ -1,13 +1,14 @@
 # Personal NeoVim config
 
 ## Icons
-Icons are used mainly within nvim-tree plugin. The neovim plugin for icons is already a part of this project.
-But your terminal still needs to be able to render the correct font that includes those icons.
+Icons are used by different plugins to give nvim a prettier look. The plugin for icons is already installed by in this config.
+But your terminal still needs to be able to render the new font properly.
 
-Install one of the many icon fonts listed [here](https://www.nerdfonts.com/). Just follow their instructions for your specific OS.
-After you have successfully installed one version of the nerd font, set your terminal to use those icon fonts. 
-Any reasonable terminal should allow you to selectively set your icon font only for the non-ascii characters, while keeping your 
-favorite font for the usual text. Or do something similar.
+### Installing Icon fonts
+
+Install one of the icon fonts listed [here](https://www.nerdfonts.com/). Just follow their instructions for your specific OS.
+After you have successfully installed it, you will have to configure your terminal to start using it. 
+Any reasonable terminal should allow you to enable the new icon font only for a subset of characters (eg. non-ascii). 
 
 
 ## TODOS
@@ -18,5 +19,5 @@ favorite font for the usual text. Or do something similar.
  -     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
 - DAP https://github.com/mfussenegger/nvim-dap
 - better tab support - opening, closing, reusing tabs
-- autocomplete top suggestions using only Enter instead of Down + Enter
+- fix tabstop & numberline
 - fix basic settings
