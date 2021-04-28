@@ -12,10 +12,9 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 
 
 ## TODOS
-- fix lightline (use galaxy line/lualine?)
+- use galaxyline/lualine
 - fix numberline
-- fix colorscheme
-- just fix tab management in general (don't open 2 file twice, but focus instead)
+- fix diagnostic colors
 - add whichkey 
 - try running LSPInstall in packer
 - improve icons & colors for diagnostics
