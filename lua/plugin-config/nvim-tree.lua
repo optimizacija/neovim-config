@@ -7,7 +7,7 @@ vim.api.nvim_set_keymap('n', '<leader>n', '<Cmd>NvimTreeFindFile<CR>', opts)
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 vim.g.nvim_tree_bindings = {
   ["<C-t>"]          = tree_cb("tabnew"),
-  ["<CR>"]           = tree_cb("tabnew"),
+  ["<CR>"]           = tree_cb("edit"),
   ["o"]              = tree_cb("edit"),
   ["<2-LeftMouse>"]  = tree_cb("edit"),
   ["<2-RightMouse>"] = tree_cb("cd"),
