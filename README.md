@@ -1,8 +1,8 @@
 # Personal NeoVim config
 
 ## Icons
-Icons are used by different plugins to give nvim a prettier look. The plugin for icons is already installed by in this config.
-But your terminal still needs to be able to render the new font properly.
+Icons are used by different plugins to give nvim a prettier look. The plugin for icons is already installed with this config.
+But your terminal still needs to be able to render the icon font properly.
 
 ### Installing Icon fonts
 
@@ -12,6 +12,7 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 
 
 ## TODOS
+- fix lightline (use galaxy line/lualine?)
 - fix numberline
 - fix colorscheme
 - just fix tab management in general (don't open 2 file twice)
@@ -20,5 +21,4 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 - improve icons & colors for diagnostics
 - git integration (color changed/deleted lines)
 - DAP https://github.com/mfussenegger/nvim-dap
-- fix lightline (use galaxy line/lualine?)
 - add indent guide lines
