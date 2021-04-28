@@ -70,7 +70,7 @@ local packer = require('packer').startup(function()
   
   -- better LSP UI (for code actions, rename etc.)
   use 'glepnir/lspsaga.nvim'
-  
+
   -- TODO: indent blank lightlin lukas-reineke/indent-blankline.nvim
 	-- use 'lukas-reineke/indent-blankline.nvim'
 	-- use 'Yggdroot/indentLine'
