@@ -12,15 +12,13 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 
 
 ## TODOS
-- git integration (color changed/deleted lines)
-- try running LSPInstall in packer
-- DAP https://github.com/mfussenegger/nvim-dap
 - fix numberline
-- fix swapfiles
-- improve icons & colors for diagnostics
-- fix lightline (use galaxy line/lualine?)
-- add ignore files to indent lines 
-- add whichkey 
 - fix colorscheme
-- fix barbar's need to save 
-- just fix tab management in general
+- just fix tab management in general (don't open 2 file twice)
+- add whichkey 
+- try running LSPInstall in packer
+- improve icons & colors for diagnostics
+- git integration (color changed/deleted lines)
+- DAP https://github.com/mfussenegger/nvim-dap
+- fix lightline (use galaxy line/lualine?)
+- add indent guide lines
