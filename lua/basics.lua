@@ -58,6 +58,8 @@ vim.o.shiftwidth = 2 	    -- size of indent (measured in spaces), should equal t
 vim.bo.shiftwidth = 2
 vim.o.softtabstop = 2 	  -- should be the same as the other two above
 vim.bo.softtabstop = 2
+vim.o.expandtab = true    -- expand tabs to spaces
+vim.bo.expandtab = true    -- expand tabs to spaces
 vim.o.smartindent = true  -- smart indenting on new line for C-like programs
 vim.bo.smartindent = true
 vim.o.autoindent = true   -- copy the indentation from previous line
@@ -101,3 +103,6 @@ vim.o.completeopt='menuone,preview,noinsert'
 -- this means that aa modified buffer doesn't need to be saved when changing 
 -- tabs/windows.
 vim.o.hidden=true
+
+-- Copy paste between vim and everything else
+vim.o.clipboard = "unnamedplus"
