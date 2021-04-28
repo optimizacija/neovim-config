@@ -7,6 +7,8 @@ vim.g.mapleader = ','
 
 -- ================= File management ================= --
 
+-- swapfile has global & local config, eventhough help says otherwise
+vim.o.swapfile = false -- can open already open files
 vim.bo.swapfile = false
 vim.o.backup = false
 vim.o.writebackup = false
@@ -49,6 +51,7 @@ vim.api.nvim_command('let g:palenight_terminal_italics=1')
 -- see :help options.txt
 
 -- for some reason these values need to be set in both o and bo objects
+-- eventhough these options are supposed to be local to buffer
 vim.o.tabstop = 2					-- maximum width of tab character (measured in spaces)
 vim.bo.tabstop = 2
 vim.o.shiftwidth = 2 	    -- size of indent (measured in spaces), should equal tabstop
@@ -93,3 +96,8 @@ vim.o.mouse = 'nv' -- allow mose in normal & visual mode
 -- preview - show extra information about currently selected completion
 -- noinsert - do not insert any text for match until the user selects it from the menu
 vim.o.completeopt='menuone,preview,noinsert'
+
+-- allows hidden buffers
+-- this means that aa modified buffer doesn't need to be saved when changing 
+-- tabs/windows.
+vim.o.hidden=true
