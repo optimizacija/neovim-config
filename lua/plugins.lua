@@ -15,28 +15,25 @@ local packer = require('packer').startup(function()
   -- colorscheme
   use 'drewtempelmeyer/palenight.vim'
 
-  -- TODO: better git integration 
+  -- TODO: better git integration
   -- - checkout: gitsigns, airblade/vim-gitgutter
   use 'tpope/vim-fugitive'
 
   -- surround vim
   use 'tpope/vim-surround'
-  
+
   -- nerd commenter
   use 'scrooloose/nerdcommenter'
 
   -- status line
-  -- TODO: try out galaxy line / lualine
-  use 'itchyny/lightline.vim'
-	-- use 'hoob3rt/lualine.nvim'
-	-- use 'glepnir/galaxyline.nvim'
+	use 'glepnir/galaxyline.nvim'
 
   -- show recent files on empty nvim command
   use 'mhinz/vim-startify'
 
   -- lsp config
   use 'neovim/nvim-lspconfig'
-  
+
   -- for installing LSP servers within nvim
   use 'kabouzeid/nvim-lspinstall'
 
@@ -58,7 +55,7 @@ local packer = require('packer').startup(function()
   -- nvim & icons for nvim
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
-  
+
   -- prettier tabs
   use 'romgrk/barbar.nvim'
 
@@ -67,7 +64,7 @@ local packer = require('packer').startup(function()
 
   -- support the missing lsp diagnostic colors
   use 'folke/lsp-colors.nvim'
-  
+
   -- better LSP UI (for code actions, rename etc.)
   use 'glepnir/lspsaga.nvim'
 
@@ -85,6 +82,7 @@ require('plugin-config/barbar')
 require('plugin-config/lsp-colors')
 require('plugin-config/lsp-trouble')
 require('plugin-config/lspsaga')
+require('plugin-config/galaxyline')
 require('plugin-config/indentline') -- TODO
 
 return packer

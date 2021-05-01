@@ -12,7 +12,6 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 
 
 ## TODOS
-- use galaxyline/lualine
 - fix diagnostic colors
 - add whichkey 
 - try running LSPInstall in packer
