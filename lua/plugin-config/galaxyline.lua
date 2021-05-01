@@ -198,6 +198,7 @@ section.right[4] = {
   }
 }
 
+-- TODO: colored right line?
 -- cosmetics
 section.right[5] = {
   Space2 = {
