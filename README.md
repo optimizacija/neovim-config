@@ -12,11 +12,14 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 
 
 ## TODOS
-- fix diagnostic colors
+minor:
+- set icons & fix colors for diagnostics
+medium:
 - add whichkey 
+major:
 - try running LSPInstall in packer
-- improve icons & colors for diagnostics
 - git integration (color changed/deleted lines)
+- autoformat (prettier)
+future:
 - DAP https://github.com/mfussenegger/nvim-dap
 - add indent guide lines
-- autoformat (prettier)
