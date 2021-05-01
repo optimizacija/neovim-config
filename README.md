@@ -19,3 +19,4 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 - git integration (color changed/deleted lines)
 - DAP https://github.com/mfussenegger/nvim-dap
 - add indent guide lines
+- autoformat (prettier)
