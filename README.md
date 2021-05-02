@@ -13,9 +13,9 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 
 ## TODOS
 major:
-- try running LSPInstall in packer
 - git integration (color changed/deleted lines)
 - autoformat (prettier)
 - DAP https://github.com/mfussenegger/nvim-dap
 future:
+- try running LSPInstall automatically for a list of servers in packer
 - add indent guide lines
