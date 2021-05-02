@@ -133,8 +133,6 @@ section.left[3] = {
   }
 }
 
--- TODO: the following diffs don't work
--- should install vim-gitgutter vim-signify gitsigns (https://github.com/glepnir/galaxyline.nvim/blob/cbf64bd4869c810b92f6450ed8763456c489be87/README.md)
 -- git added files
 section.left[4] = {
   DiffAdd = {
@@ -198,7 +196,6 @@ section.right[4] = {
   }
 }
 
--- TODO: colored right line?
 -- cosmetics
 section.right[5] = {
   Space2 = {

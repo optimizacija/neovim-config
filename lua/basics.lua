@@ -35,10 +35,8 @@ if vim.fn.has('termguicolors') == 1 then
   vim.o.termguicolors = true
 end
 
--- TODO check what this does
 vim.o.background = 'dark'
-
-vim.api.nvim_command('colorscheme palenight')
+vim.cmd('colorscheme palenight')
 -- turn on italics
 vim.api.nvim_command('let g:palenight_terminal_italics=1')
 
