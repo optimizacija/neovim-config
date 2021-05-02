@@ -12,6 +12,8 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 
 
 ## TODOS
+minor:
+- fix gitsigns colorscheme
 major:
 - autoformat (prettier)
 - DAP https://github.com/mfussenegger/nvim-dap
