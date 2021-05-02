@@ -40,7 +40,6 @@ vim.o.syntax = 'on'
 vim.o.background = 'dark'
 
 vim.api.nvim_command('colorscheme palenight')
-vim.api.nvim_command('let g:lightline = { "colorscheme": "palenight" }')
 -- turn on italics
 vim.api.nvim_command('let g:palenight_terminal_italics=1')
 
