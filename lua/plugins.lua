@@ -88,6 +88,5 @@ require('plugin-config/lsp-colors')
 require('plugin-config/lsp-trouble')
 require('plugin-config/lspsaga')
 require('plugin-config/galaxyline')
-require('plugin-config/indentline') -- TODO
 
 return packer
