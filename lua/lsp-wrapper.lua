@@ -1,3 +1,7 @@
+-- general settings
+require('lsp/general')
+
+-- language specific configs
 require('lsp/bash')
 require('lsp/css')
 require('lsp/docker')

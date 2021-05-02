@@ -41,7 +41,7 @@ local li = {
 -- taken from LunarVim
 local colors = {
     bg = '#292D38',
-    yellow = '#DCDCAA',
+    yellow = '#FFEB68',
     dark_yellow = '#D7BA7D',
     cyan = '#4EC9B0',
     green = '#608B4E',
@@ -57,7 +57,7 @@ local colors = {
     red = '#D16969',
     error_red = '#F44747',
     info_yellow = '#FFCC66',
-    white = '#ffffff'
+    white = '#FFFFFF'
 }
 
 -- list of windows for which short line will be used
@@ -72,23 +72,23 @@ section.left[1] = {
     provider = function()
       -- define color for each mode
       local mode_color = {
-        n = colors.blue,
-        i = colors.green,
-        v = colors.purple,
-        [''] = colors.purple,
-        V = colors.purple,
-        c = colors.magenta,
-        no = colors.blue,
-        s = colors.orange,
-        S = colors.orange,
-        [''] = colors.orange,
+        n = colors.blue,        -- normal
+        i = colors.grey, -- insert
+        v = colors.purple,      -- visual
+        [''] = colors.purple, -- visual block
+        V = colors.purple,      -- visual line
+        c = colors.dark_yellow, -- command
+        no = colors.blue,       -- normal ??
+        s = colors.orange,      -- select ??
+        S = colors.orange,      -- select line ??
+        [''] = colors.orange, -- select block??
         ic = colors.yellow,
-        R = colors.red,
-        Rv = colors.red,
-        cv = colors.blue,
-        ce = colors.blue,
-        r = colors.cyan,
-        rm = colors.cyan,
+        R = colors.red,         -- Replace
+        Rv = colors.red,        -- replace visual?
+        cv = colors.blue,       -- command ??
+        ce = colors.blue,       -- command ??
+        r = colors.cyan,        -- ??
+        rm = colors.cyan,       -- ??
         ['r?'] = colors.cyan,
         ['!'] = colors.blue,
         t = colors.blue

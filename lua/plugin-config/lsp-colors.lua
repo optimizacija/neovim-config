@@ -1,9 +1,7 @@
 -- Lua
---[[ change defaults
-require("lsp-colors").setup({
-  Error = "#db4b4b",
-  Warning = "#e0af68",
-  Information = "#0db9d7",
-  Hint = "#10B981"
+require('lsp-colors').setup({
+  Error = '#F44747',
+  Warning = '#FF8800',
+  Hint = '#4FC1FF',
+  Information = '#FFCC66'
 })
---]]
