@@ -36,7 +36,6 @@ if vim.fn.has('termguicolors') == 1 then
 end
 
 -- TODO check what this does
-vim.o.syntax = 'on'
 vim.o.background = 'dark'
 
 vim.api.nvim_command('colorscheme palenight')
@@ -99,7 +98,7 @@ vim.o.mouse = 'nv' -- allow mose in normal & visual mode
 vim.o.completeopt='menuone,preview,noinsert'
 
 -- allows hidden buffers
--- this means that aa modified buffer doesn't need to be saved when changing 
+-- this means that a modified buffer doesn't need to be saved when changing
 -- tabs/windows.
 vim.o.hidden=true
 
