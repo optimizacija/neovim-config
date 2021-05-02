@@ -13,7 +13,6 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 
 ## TODOS
 major:
-- git integration (color changed/deleted lines)
 - autoformat (prettier)
 - DAP https://github.com/mfussenegger/nvim-dap
 future:
