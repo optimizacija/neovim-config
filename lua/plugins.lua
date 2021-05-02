@@ -16,9 +16,8 @@ local packer = require('packer').startup(function()
   -- colorscheme
   use 'drewtempelmeyer/palenight.vim'
 
-  -- TODO: better git integration
-  -- - checkout: gitsigns, airblade/vim-gitgutter
-  use 'tpope/vim-fugitive'
+  -- git integration
+  use 'lewis6991/gitsigns.nvim'
 
   -- surround vim
   use 'tpope/vim-surround'
@@ -88,5 +87,6 @@ require('plugin-config/lsp-colors')
 require('plugin-config/lsp-trouble')
 require('plugin-config/lspsaga')
 require('plugin-config/galaxyline')
+require('plugin-config/gitsigns')
 
 return packer
