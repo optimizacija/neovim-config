@@ -8,6 +8,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute 'packadd packer.nvim'
 end
 
+local use = require('packer').use
 local packer = require('packer').startup(function()
   -- Packer should manage itself
   use 'wbthomason/packer.nvim'
@@ -43,7 +44,11 @@ local packer = require('packer').startup(function()
   -- telescope - searching / navigation
   use {
     'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}, {'livegrep/livegrep'}}
+    requires = {
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
+      {'livegrep/livegrep'}
+    }
   }
 
   -- better hotfix window (for showing and searching through results in telescope's find usages)
