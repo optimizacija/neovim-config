@@ -14,11 +14,12 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 ## TODOS
 minor:
 - fix gitsigns colorscheme
+- autoclose autocomplete on enter
+- prettify telescope
 major:
 - autoformat (prettier)
 - DAP https://github.com/mfussenegger/nvim-dap
 future:
 - try running LSPInstall automatically for a list of servers in packer
 misc:
-- read TODOs in the source codemisc:
 - read TODOs in the source code
