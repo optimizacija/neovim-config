@@ -19,3 +19,6 @@ major:
 - DAP https://github.com/mfussenegger/nvim-dap
 future:
 - try running LSPInstall automatically for a list of servers in packer
+misc:
+- read TODOs in the source codemisc:
+- read TODOs in the source code

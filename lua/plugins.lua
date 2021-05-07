@@ -40,6 +40,7 @@ local packer = require('packer').startup(function()
   -- for LSP autocompletion
   use 'hrsh7th/nvim-compe'
 
+  -- TODO: prettify telescope vim, make it use regex & shorten the window
   -- telescope - searching / navigation
   use {
     'nvim-telescope/telescope.nvim',
@@ -75,6 +76,9 @@ local packer = require('packer').startup(function()
   -- show indentation levels
   use 'lukas-reineke/indent-blankline.nvim'
   use 'Yggdroot/indentLine'
+
+  -- TODO: integrated lazygit
+  -- https://github.com/kdheepak/lazygit.nvim
 end)
 
 -- plugin specific configs go here
