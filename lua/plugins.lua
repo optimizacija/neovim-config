@@ -26,7 +26,7 @@ local packer = require('packer').startup(function()
   use 'scrooloose/nerdcommenter'
 
   -- status line
-	use 'glepnir/galaxyline.nvim'
+  use 'glepnir/galaxyline.nvim'
 
   -- show recent files on empty nvim command
   use 'mhinz/vim-startify'
@@ -72,9 +72,9 @@ local packer = require('packer').startup(function()
   -- better LSP UI (for code actions, rename etc.)
   use 'glepnir/lspsaga.nvim'
 
-  -- TODO: indent blank lightlin lukas-reineke/indent-blankline.nvim
-	-- use 'lukas-reineke/indent-blankline.nvim'
-	-- use 'Yggdroot/indentLine'
+  -- show indentation levels
+  use 'lukas-reineke/indent-blankline.nvim'
+  use 'Yggdroot/indentLine'
 end)
 
 -- plugin specific configs go here
@@ -88,5 +88,6 @@ require('plugin-config/lsp-trouble')
 require('plugin-config/lspsaga')
 require('plugin-config/galaxyline')
 require('plugin-config/gitsigns')
+require('plugin-config/indent-guide-lines')
 
 return packer
