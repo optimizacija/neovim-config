@@ -13,8 +13,8 @@ require('gitsigns').setup {
     noremap = true,
     buffer = true,
 
-    ['n ]c'] = { expr = true, "&diff ? ']c' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"},
-    ['n [c'] = { expr = true, "&diff ? '[c' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'"},
+    ['n <leader>hn'] = { expr = true, "&diff ? '<leader>hn' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"},
+    ['n <leader>hN'] = { expr = true, "&diff ? '<leader>hN' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'"},
 
     ['n <leader>hs'] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
     ['n <leader>hu'] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
