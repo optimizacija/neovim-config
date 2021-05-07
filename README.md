@@ -19,4 +19,3 @@ major:
 - DAP https://github.com/mfussenegger/nvim-dap
 future:
 - try running LSPInstall automatically for a list of servers in packer
-- add indent guide lines

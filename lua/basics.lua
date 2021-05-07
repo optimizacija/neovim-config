@@ -48,12 +48,12 @@ vim.api.nvim_command('let g:palenight_terminal_italics=1')
 
 -- for some reason these values need to be set in both o and bo objects
 -- eventhough these options are supposed to be local to buffer
-vim.o.tabstop = 2					-- maximum width of tab character (measured in spaces)
-vim.bo.tabstop = 2
-vim.o.shiftwidth = 2 	    -- size of indent (measured in spaces), should equal tabstop
-vim.bo.shiftwidth = 2
-vim.o.softtabstop = 2 	  -- should be the same as the other two above
-vim.bo.softtabstop = 2
+vim.o.tabstop = 4					-- maximum width of tab character (measured in spaces)
+vim.bo.tabstop = 4
+vim.o.shiftwidth = 4 	    -- size of indent (measured in spaces), should equal tabstop
+vim.bo.shiftwidth = 4
+vim.o.softtabstop = 4 	  -- should be the same as the other two above
+vim.bo.softtabstop = 4
 vim.o.expandtab = true    -- expand tabs to spaces
 vim.bo.expandtab = true    -- expand tabs to spaces
 vim.o.smartindent = true  -- smart indenting on new line for C-like programs
