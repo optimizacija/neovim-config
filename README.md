@@ -14,7 +14,6 @@ Any reasonable terminal should allow you to enable the new icon font only for a 
 ## TODOS
 minor:
 - fix gitsigns colorscheme
-- autoclose autocomplete on enter
 - prettify telescope
 major:
 - autoformat (prettier)
