@@ -17,7 +17,12 @@ local packer = require('packer').startup(function()
   use 'drewtempelmeyer/palenight.vim'
 
   -- git integration
-  use 'lewis6991/gitsigns.nvim'
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+        {'nvim-lua/plenary.nvim'}
+    }
+  }
 
   -- surround vim
   use 'tpope/vim-surround'
