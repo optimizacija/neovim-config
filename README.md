@@ -1,5 +1,7 @@
 # Short Intro
 
+![Screenshot](./assets/nvim-screenshot.png)
+
 This is my NeoVim config (for version 0.5 and greater).
 
 I've decided to move away from the old setup, since modern NeoVim offers much better
@@ -51,8 +53,6 @@ Here's a short list of features that this config offers (through the use of 3rd 
     * Default colorscheme
     * Enabled mouse integration
     * Keymappings for 10 finger typing on Slovene keyboard 
-
-![Screenshot](./assets/nvim-screenshot.png)
 
 ## Installation
 
