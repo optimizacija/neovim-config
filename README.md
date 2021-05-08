@@ -16,6 +16,7 @@ minor:
 - fix gitsigns colorscheme
 - prettify telescope
 major:
+- automatic installation
 - autoformat (prettier)
 - DAP https://github.com/mfussenegger/nvim-dap
 future:
