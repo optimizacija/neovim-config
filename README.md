@@ -52,6 +52,8 @@ Here's a short list of features that this config offers (through the use of 3rd 
     * Enabled mouse integration
     * Keymappings for 10 finger typing on Slovene keyboard 
 
+![Screenshot](./assets/nvim-screenshot.png)
+
 ## Installation
 
 I will make the whole installation process more friendly in the future,
