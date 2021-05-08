@@ -1,14 +1,14 @@
 # Personal NeoVim config
 
 ## Icons
-Icons are used by different plugins to give nvim a prettier look. The plugin for icons is already installed with this config.
-But your terminal still needs to be able to render the icon font properly.
+Icons and other special characters are used all around the config to give nvim a prettier look, 
+but your terminal also needs to be able to render the icons properly.
 
 ### Installing Icon fonts
 
 Install one of the icon fonts listed [here](https://www.nerdfonts.com/). Just follow their instructions for your specific OS.
-After you have successfully installed it, you will have to configure your terminal to start using it. 
-Any reasonable terminal should allow you to enable the new icon font only for a subset of characters (eg. non-ascii). 
+After installation is complete, don't forget to configure your terminal to start using the new font. 
+Each terminal does this differently, so be sure to checkout [Arch Wiki](https://wiki.archlinux.org/).
 
 
 ## TODOS
