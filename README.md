@@ -98,3 +98,4 @@ Future:
 
 Misc:
 - read TODOs in the source code
+- open previously opened project files
