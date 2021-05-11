@@ -1,4 +1,4 @@
--- npm install -g vscode-css-languageserver-bin
+-- :LspInstall css
 require'lspconfig'.cssls.setup {
   cmd = { 
 	  'node',
