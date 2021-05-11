@@ -9,7 +9,7 @@ local actions = require('telescope.actions')
 require('telescope').setup {
     defaults = {
         -- program to use for searching with its arguments
-        find_command = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'}, 
+        find_command = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
         prompt_position = 'top', -- have prompt at the top (has no effect on vertical configuration)
         prompt_prefix = ' ', -- symbol on prompt window
         selection_caret = ' ', -- symbol on selected row in results window
