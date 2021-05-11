@@ -86,7 +86,7 @@ Stuff that's work in progress.
 
 Minor:
 - fix gitsigns colorscheme issues
-- prettify telescope & improve functionality (support regex)
+- improve telescope functionality (support regex)
 
 Major:
 - autoformat (prettier)
