@@ -1,4 +1,4 @@
--- npm install -g vscode-json-languageserver
+-- :LspInstall json
 require'lspconfig'.jsonls.setup {
   cmd = {
     'node',
