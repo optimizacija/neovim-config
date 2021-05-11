@@ -84,4 +84,4 @@ vim.api.nvim_set_keymap('n', 'gf', '<Cmd>lua vim.lsp.buf.references()<CR>', opts
 -- autocomplete
 -- if autocomplete popup menu opens pressing enter will complete the first match
 -- vim.api.nvim_set_keymap('i', '<Tab>', 'v:lua.smart_tab()', {expr = true, noremap = true})
-vim.api.nvim_set_keymap('i', '<CR>', 'pumvisible() ? "<C-n><Esc>" : "<CR>"', {expr = true, noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<CR>', 'pumvisible() ? "<C-n><Esc>a" : "<CR>"', {expr = true, noremap = true, silent = true})
