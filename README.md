@@ -85,6 +85,7 @@ Each terminal does this differently, so be sure to checkout [Arch Wiki](https://
 Stuff that's work in progress.
 
 Minor:
+- fix angularls
 - fix gitsigns colorscheme issues
 - improve telescope functionality (support regex)
 
