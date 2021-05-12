@@ -86,6 +86,7 @@ Stuff that's work in progress.
 
 Minor:
 - fix angularls
+- add project name to status line
 - fix gitsigns colorscheme issues
 - improve telescope functionality (support regex)
 
