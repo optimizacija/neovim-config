@@ -89,8 +89,6 @@ Minor:
 - add project name to status line
 - fix gitsigns colorscheme issues
 - improve telescope functionality (support regex)
-- try out dashboard instead of startify, because of 'recently opened files' feature
-    - https://github.com/glepnir/dashboard-nvim
 
 Major:
 - autoformat (prettier)
