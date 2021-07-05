@@ -93,6 +93,8 @@ Minor:
 Major:
 - autoformat (prettier)
 - DAP https://github.com/mfussenegger/nvim-dap
+- fix installation process
+- fix plugins since the new update
 
 Future:
 - try running LSPInstall automatically for a list of servers in packer

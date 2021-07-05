@@ -10,7 +10,7 @@ require('telescope').setup {
     defaults = {
         -- program to use for searching with its arguments
         find_command = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
-        prompt_position = 'top', -- have prompt at the top (has no effect on vertical configuration)
+        -- prompt_position = 'top', -- have prompt at the top (has no effect on vertical configuration)
         prompt_prefix = ' ', -- symbol on prompt window
         selection_caret = ' ', -- symbol on selected row in results window
         entry_prefix = '  ', -- symbol on non-selected rows in results window
@@ -18,7 +18,7 @@ require('telescope').setup {
         selection_strategy = 'reset', -- what happens to selection when list changes
         sorting_strategy = 'ascending', -- start with most important search on top
         layout_strategy = 'vertical', -- vertical layout
-        layout_defaults = {
+        layout_config = {
             vertical = {
                 mirror = true, -- windows should be in this order from top to bottom: search, results, preview
                 preview_height = 0.5 -- preview window takes 0.5 of the total window height
@@ -38,19 +38,20 @@ require('telescope').setup {
         grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
         qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
         buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
+        -- preview_cutoff = 120,
         mappings = {
             i = {
                 ['<C-k>'] = actions.move_selection_next,
                 ['<C-l>'] = actions.move_selection_previous,
                 ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
-                ['ć'] = '<Esc>', -- change to normal mode
+                -- ['ć'] = actions.close,
                 ['<CR>'] = actions.select_default + actions.center,
             },
             n = {
                 ['<C-k>'] = actions.move_selection_next,
                 ['<C-l>'] = actions.move_selection_previous,
                 ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
-                ['ć'] = actions.close, -- close window
+                ['ć'] = actions.close,
             }
         }
     },

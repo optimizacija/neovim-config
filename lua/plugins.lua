@@ -20,7 +20,7 @@ local packer = require('packer').startup(function()
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
-        {'nvim-lua/plenary.nvim'}
+      'nvim-lua/plenary.nvim'
     }
   }
 
@@ -78,7 +78,6 @@ local packer = require('packer').startup(function()
   use 'glepnir/lspsaga.nvim'
 
   -- show indentation levels
-  use 'lukas-reineke/indent-blankline.nvim'
   use 'Yggdroot/indentLine'
 
   -- TODO: integrated lazygit
