@@ -12,7 +12,6 @@ If for whatever reason you would still like to get your hands on the old setup
 (which was more c++ oriented)
 you can do so by checking out the archived branch [archive/version-1](https://github.com/optimizacija/neovim-config/tree/archive/version-1).
 
-
 ## Features
 
 Here's a short list of features that this config offers (through the use of 3rd party plugins).
@@ -82,7 +81,7 @@ Each terminal does this differently, so be sure to checkout [Arch Wiki](https://
 
 ## TODOS
 
-Stuff that's work in progress.
+I'm working on this config in my spare time, but lately other side projects are getting in the way. I'll try to update it when I can, but also feel free to contribute by submitting a PR with your changes.
 
 Minor:
 - fix angularls
