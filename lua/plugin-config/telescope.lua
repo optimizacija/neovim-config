@@ -27,7 +27,7 @@ require('telescope').setup {
         file_sorter = require'telescope.sorters'.get_fuzzy_file,
         file_ignore_patterns = {'node_modules/.*'}, -- never search in node_modules/ dir
         generic_sorter = require'telescope.sorters'.get_generic_fuzzy_sorter,
-        shorten_path = true,
+        display_path = true,
         winblend = 0, -- window should not be transparent
         border = {}, -- no border?
         borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'}, -- border chars
