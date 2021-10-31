@@ -1,5 +1,6 @@
 require('basics')
 require('globals')
 require('keymappings')
-require('lsp-wrapper')
 require('plugins')
+require('lsp-wrapper')
+require('post-plugin-basics')

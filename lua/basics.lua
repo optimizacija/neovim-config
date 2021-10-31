@@ -29,14 +29,6 @@ autocmd FileChangedShellPost *
 vim.o.scrolloff = 8 -- start scrolling when 8 lines away from margins
 
 
--- ================= Visualization ================= --
-
-vim.o.termguicolors = true
-vim.o.background = 'dark'
-vim.cmd('colorscheme palenight')
-vim.api.nvim_command('let g:palenight_terminal_italics=1')
-
-
 -- ================= Indentation ================= --
 
 -- pay attention to 'vim.bo' (buffer local options) and 'vim.o' (global options)
