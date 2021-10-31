@@ -49,10 +49,7 @@ local packer = require('packer').startup(function()
   -- telescope - searching / navigation
   use {
     'nvim-telescope/telescope.nvim',
-    requires = {
-      {'nvim-lua/popup.nvim'},
-      {'nvim-lua/plenary.nvim'},
-    }
+    requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   -- better hotfix window (for showing and searching through results in telescope's find usages)
@@ -61,9 +58,11 @@ local packer = require('packer').startup(function()
   -- better highlighting
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
-  -- nvim & icons for nvim
-  use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = function() require'nvim-tree'.setup {} end
+  }
 
   -- prettier tabs
   use 'romgrk/barbar.nvim'
@@ -79,9 +78,6 @@ local packer = require('packer').startup(function()
 
   -- show indentation levels
   use 'Yggdroot/indentLine'
-
-  -- TODO: integrated lazygit
-  -- https://github.com/kdheepak/lazygit.nvim
 end)
 
 -- plugin specific configs go here

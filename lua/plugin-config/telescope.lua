@@ -1,9 +1,9 @@
 -- Find files using lua fuctions
 local opts = { silent = true, noremap = true }
-vim.api.nvim_set_keymap('n', '<leader>ff', '<Cmd>lua require(\'telescope.builtin\').find_files()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>fg', '<Cmd>lua require(\'telescope.builtin\').live_grep()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>fb', '<Cmd>lua require(\'telescope.builtin\').buffers()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>fh', '<Cmd>lua require(\'telescope.builtin\').help_tags()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Leader>ff', "<Cmd>lua require'telescope.builtin'.find_files()<CR>", {silent=false, noremap=true})
+vim.api.nvim_set_keymap('n', '<Leader>fg', "<Cmd>lua require'telescope.builtin'.live_grep()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<Leader>fb', "<Cmd>lua require'telescope.builtin'.buffers()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<Leader>fh', "<Cmd>lua require'telescope.builtin'.help_tags()<CR>", opts)
 
 local actions = require('telescope.actions')
 require('telescope').setup {
@@ -27,7 +27,7 @@ require('telescope').setup {
         file_sorter = require'telescope.sorters'.get_fuzzy_file,
         file_ignore_patterns = {'node_modules/.*'}, -- never search in node_modules/ dir
         generic_sorter = require'telescope.sorters'.get_generic_fuzzy_sorter,
-        shorten_path = true,
+        display_path = true,
         winblend = 0, -- window should not be transparent
         border = {}, -- no border?
         borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'}, -- border chars
