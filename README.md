@@ -12,11 +12,6 @@ If for whatever reason you would still like to get your hands on the old setup
 (which was more c++ oriented)
 you can do so by checking out the archived branch [archive/version-1](https://github.com/optimizacija/neovim-config/tree/archive/version-1).
 
-## Disclosure
-
-Since NeoVim 0.6, a lot of plugins have changed and some functionalities are no longer working. I'll 
-revisit my config sometime in the near future, but until then this config won't be fully functional.
-
 ## Features
 
 Here's a short list of features that this config offers (through the use of 3rd party plugins).
@@ -88,17 +83,17 @@ Each terminal does this differently, so be sure to checkout [Arch Wiki](https://
 
 I'm working on this config in my spare time, but lately other side projects are getting in the way. I'll try to update it when I can, but also feel free to contribute by submitting a PR with your changes.
 
+WIP:
+- fix installation process
+
 Minor:
 - fix angularls
 - add project name to status line
-- fix gitsigns colorscheme issues
 - improve telescope functionality (support regex)
 
 Major:
 - autoformat (prettier)
 - DAP https://github.com/mfussenegger/nvim-dap
-- fix installation process
-- fix plugins since the new update
 
 Future:
 - try running LSPInstall automatically for a list of servers in packer
