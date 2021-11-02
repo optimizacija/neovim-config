@@ -1,9 +1,10 @@
 local fn = vim.fn
-local install_path = DATA_PATH..'/site/pack/packer/start/packer.nvim'
+local installPath = DATA_PATH..'/site/pack/packer/start/packer.nvim'
 
 -- install packer if it's not installed already
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+local packerBootstrap = nil
+if fn.empty(fn.glob(installPath)) > 0 then
+  packerBootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', installPath})
   vim.cmd [[packadd packer.nvim]]
 end
 
@@ -79,7 +80,7 @@ local packer = require('packer').startup(function(use)
 
   -- this will automatically install listed dependencies
   -- only the first time NeoVim is opened, because that's when Packer gets installed
-  if packer_bootstrap then
+  if packerBootstrap then
     require('packer').sync()
   end
 end)
