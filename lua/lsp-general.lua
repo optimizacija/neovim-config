@@ -28,6 +28,9 @@ lsp_installer.on_server_ready(function(server)
     -- if server.name == "tsserver" then
     --     opts.root_dir = function() ... end
     -- end
+    if server.name == 'sumneko_lua' then
+        opts = require'lsp-server-config.lua'
+    end
 
     -- This setup() function is exactly the same as lspconfig's setup function.
     -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/ADVANCED_README.md
