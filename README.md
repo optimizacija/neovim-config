@@ -67,7 +67,6 @@ git clone git@github.com:optimizacija/neovim-config.git
     - On Linux this is `$HOME/.config/share/nvim`. Otherwise check the output of `:lua print(vim.fn.stdpath('data')`.
 4. Open NeoVim and let it install Packer and all the dependencies (ignore the errors).
 5. Open NeoVim again and wait for nvim-treesitter to install all of its dependencies (ignore the errors).
-6. Install LSP support, run `:LSPInstall <server>` for each lang server you need (this definitelly needs to be improved) (*WIP*)
 
 
 ## Icons
@@ -83,10 +82,6 @@ Each terminal does this differently, so be sure to checkout [Arch Wiki](https://
 
 I'm working on this config in my spare time, but lately other side projects are getting in the way. I'll try to update it when I can, but also feel free to contribute by submitting a PR with your changes.
 
-WIP:
-- fixing LSP settings
-- try running LSPInstall automatically for a list of servers in packer
-
 Minor:
 - improve telescope functionality (support regex)
 
@@ -96,4 +91,3 @@ Major:
 
 Misc:
 - open previously opened project files
-
