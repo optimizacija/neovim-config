@@ -64,7 +64,7 @@ git clone git@github.com:optimizacija/neovim-config.git
 ```
 2. Put the contents of this repo where NeoVim can find them. On Linux this is most likely `$HOME/.config/nvim`.
 3. Create a *data* folder. This is where NeoVim will search for its packages, including Packer.
-    - On Linux this is `$HOME/.config/share/nvim`. Otherwise check the output of `:lua print(vim.fn.stdpath('data')`.
+    - On Linux this is `$HOME/.local/share/nvim`. Otherwise check the output of `:lua print(vim.fn.stdpath('data'))`.
 4. Open NeoVim and let it install Packer and all the dependencies (ignore the errors).
 5. Open NeoVim again and wait for nvim-treesitter to install all of its dependencies (ignore the errors).
 
