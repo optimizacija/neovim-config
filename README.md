@@ -69,7 +69,7 @@ git clone git@github.com:optimizacija/neovim-config.git
 5. Open NeoVim again and wait for nvim-treesitter to install all of its dependencies (ignore the errors).
 
 If you're updating an existing config and you're facing some issues,
-I would recommend that you remove the contents the *data* folder and retry the installation. (It has helped me in the past)
+I would recommend that you remove the contents of *data* folder and retry the installation. (It has helped me in the past)
 
 
 ## Icons
