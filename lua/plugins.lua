@@ -42,7 +42,15 @@ local packer = require('packer').startup(function(use)
   }
 
   -- for LSP autocompletion
-  use 'hrsh7th/nvim-compe'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+
+  -- For vsnip users.
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
 
   -- TODO: prettify telescope vim, make it use regex & shorten the window
   -- telescope - searching / navigation
@@ -52,6 +60,7 @@ local packer = require('packer').startup(function(use)
   }
 
   -- better hotfix window (for showing and searching through results in telescope's find usages)
+  -- TODO: learn how to use?
   use {"kevinhwang91/nvim-bqf"}
 
   -- better highlighting
@@ -76,7 +85,7 @@ local packer = require('packer').startup(function(use)
   use 'glepnir/lspsaga.nvim'
 
   -- show indentation levels
-  use 'Yggdroot/indentLine'
+  use 'lukas-reineke/indent-blankline.nvim'
 
   -- this will automatically install listed dependencies
   -- only the first time NeoVim is opened, because that's when Packer gets installed
@@ -86,7 +95,7 @@ local packer = require('packer').startup(function(use)
 end)
 
 -- plugin specific configs go here
-require('plugin-config/nvim-compe')
+require('plugin-config/nvim-cmp')
 require('plugin-config/telescope')
 require('plugin-config/nvim-tree')
 require('plugin-config/nvim-treesitter')

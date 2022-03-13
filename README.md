@@ -2,7 +2,7 @@
 
 ![Screenshot](./assets/nvim-screenshot.png)
 
-This is my NeoVim config (for version 0.6 and greater).
+This is my NeoVim config (for version 0.7 and greater).
 
 I've decided to move away from the old setup, since modern NeoVim offers much better
 and versatile language support through LSP and Lua API. 
