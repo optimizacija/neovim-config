@@ -68,6 +68,9 @@ git clone git@github.com:optimizacija/neovim-config.git
 4. Open NeoVim and let it install Packer and all the dependencies (ignore the errors).
 5. Open NeoVim again and wait for nvim-treesitter to install all of its dependencies (ignore the errors).
 
+If you're updating an existing config and you're facing some issues,
+I would recommend that you remove the contents the *data* folder and retry the installation. (It has helped me in the past)
+
 
 ## Icons
 Icons and other special characters are used all around the config to give NeoVim a prettier look.
@@ -86,7 +89,6 @@ Minor:
 - improve telescope functionality (support regex)
 
 Major:
-- fix treesitter issues
 - autoformat (prettier)
 
 Misc:
