@@ -1,5 +1,5 @@
 local opts = {silent = true, noremap = true}
-vim.api.nvim_set_keymap("n", "<leader>xx", "<cmd>LspTroubleToggle<cr>", opts)
+vim.api.nvim_set_keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
 require('trouble').setup{
     position = "bottom", -- position of the list can be: bottom, top, left, right
     icons = true, -- use devicons for filenames

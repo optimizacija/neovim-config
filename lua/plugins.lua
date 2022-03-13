@@ -82,7 +82,7 @@ local packer = require('packer').startup(function(use)
   use 'folke/lsp-colors.nvim'
 
   -- better LSP UI (for code actions, rename etc.)
-  use 'glepnir/lspsaga.nvim'
+  use 'tami5/lspsaga.nvim'
 
   -- show indentation levels
   use 'lukas-reineke/indent-blankline.nvim'

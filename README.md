@@ -86,8 +86,8 @@ Minor:
 - improve telescope functionality (support regex)
 
 Major:
+- fix treesitter issues
 - autoformat (prettier)
-- DAP https://github.com/mfussenegger/nvim-dap
 
 Misc:
 - open previously opened project files
