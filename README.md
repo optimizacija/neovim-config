@@ -2,15 +2,7 @@
 
 ![Screenshot](./assets/nvim-screenshot.png)
 
-This is my NeoVim config (for version 0.7 and greater).
-
-I've decided to move away from the old setup, since modern NeoVim offers much better
-and versatile language support through LSP and Lua API. 
-Whatever feature the `version-1` had, `version-2` now does it better.
-
-If for whatever reason you would still like to get your hands on the old setup
-(which was more c++ oriented)
-you can do so by checking out the archived branch [archive/version-1](https://github.com/optimizacija/neovim-config/tree/archive/version-1).
+This is my NeoVim config (for version 0.7.2 and greater).
 
 ## Features
 
@@ -56,7 +48,7 @@ Here's a short list of features that this config offers (through the use of 3rd 
 ## Installation
 
 I will make the whole installation process more friendly in the future,
-but for now just follow these simple steps.
+but for now just follow these steps.
 
 1. Download this repo
 ```bash
