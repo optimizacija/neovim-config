@@ -87,6 +87,9 @@ local packer = require('packer').startup(function(use)
   -- show indentation levels
   use 'lukas-reineke/indent-blankline.nvim'
 
+  -- highlight variables under cursor
+  use 'RRethy/vim-illuminate'
+
   -- this will automatically install listed dependencies
   -- only the first time NeoVim is opened, because that's when Packer gets installed
   if packerBootstrap then
