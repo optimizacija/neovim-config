@@ -18,19 +18,11 @@ local function installServers(names)
 end
 
 -- find a list of available ones here: https://github.com/williamboman/nvim-lsp-installer
-installServers({'angularls', 'bashls', 'dockerls', 'sumneko_lua', 'pyright', 'jsonls', 'cssls', 'tsserver'})
+installServers({'angularls', 'bashls', 'dockerls', 'pyright', 'jsonls', 'cssls', 'tsserver'})
 
 -- setup installed servers
 lsp_installer.on_server_ready(function(server)
     local opts = {}
-
-    -- (optional) Customize the options passed to the server
-    -- if server.name == "tsserver" then
-    --     opts.root_dir = function() ... end
-    -- end
-    if server.name == 'sumneko_lua' then
-        opts = require'lsp-server-config.lua'
-    end
 
     -- This setup() function is exactly the same as lspconfig's setup function.
     -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/ADVANCED_README.md
