@@ -1,9 +1,13 @@
 -- Find files using lua fuctions
 local opts = { silent = true, noremap = true }
 vim.api.nvim_set_keymap('n', '<Leader>ff', "<Cmd>lua require'telescope.builtin'.find_files()<CR>", {silent=false, noremap=true})
-vim.api.nvim_set_keymap('n', '<Leader>fg', "<Cmd>lua require'telescope.builtin'.live_grep()<CR>", opts)
-vim.api.nvim_set_keymap('n', '<Leader>fb', "<Cmd>lua require'telescope.builtin'.buffers()<CR>", opts)
-vim.api.nvim_set_keymap('n', '<Leader>fh', "<Cmd>lua require'telescope.builtin'.help_tags()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<Leader>fd', "<Cmd>lua require'telescope.builtin'.live_grep()<CR>", opts)
+-- live_grep_args allows to search with ripgrep's params
+-- this makes it possible to use flags such as "-P" which enables lookaround features, for example: (?<\w)
+-- -- only if your local installation of ripgrep allows the "-P" extension
+vim.api.nvim_set_keymap('n', '<leader>fa', "<Cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", opts)
+-- vim.api.nvim_set_keymap('n', '<Leader>fb', "<Cmd>lua require'telescope.builtin'.buffers()<CR>", opts) -- unused
+-- vim.api.nvim_set_keymap('n', '<Leader>fh', "<Cmd>lua require'telescope.builtin'.help_tags()<CR>", opts) -- unused
 
 local actions = require('telescope.actions')
 require('telescope').setup {

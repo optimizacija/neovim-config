@@ -56,9 +56,15 @@ local packer = require('packer').startup(function(use)
   -- telescope - searching / navigation
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = {
+        { 'nvim-lua/plenary.nvim' },
+        { 'nvim-telescope/telescope-live-grep-args.nvim' }
+    },
+    config = function()
+        require('telescope').load_extension('live_grep_args')
+    end
   }
-
+ 
   -- better hotfix window (for showing and searching through results in telescope's find usages)
   -- TODO: learn how to use?
   use {"kevinhwang91/nvim-bqf"}
