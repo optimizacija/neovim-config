@@ -75,7 +75,5 @@ Each terminal does this differently, so be sure to checkout [Arch Wiki](https://
 
 ## TODOS
 
-I'm working on this config in my spare time, but lately other side projects are getting in the way. I'll try to update it when I can, but also feel free to contribute by submitting a PR with your changes.
-
 Misc:
 - open previously opened project files
