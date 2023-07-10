@@ -2,7 +2,7 @@
 
 ![Screenshot](./assets/nvim-screenshot.png)
 
-This is my NeoVim config (for version 0.7.2 and greater).
+This is my NeoVim config (for version 0.9.0 and greater).
 
 ## Features
 
@@ -79,3 +79,4 @@ I'm working on this config in my spare time, but lately other side projects are 
 
 Misc:
 - open previously opened project files
+- Lock dependencies 
