@@ -59,12 +59,12 @@ require'nvim-tree'.setup {
   },
   view = {
     width = 30,
-    hide_root_folder = false,
+    -- hide_root_folder = false,
     side = 'left',
-    mappings = {
-      custom_only = false,
-      list = list,
-    }
+    --mappings = {
+      --custom_only = false,
+      --list = list,
+    --}
   },
   on_attach = my_on_attach
 }
