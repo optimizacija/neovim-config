@@ -38,7 +38,7 @@ local packer = require('packer').startup(function(use)
   -- lsp config
   use {
     'neovim/nvim-lspconfig',
-    'williamboman/nvim-lsp-installer',
+    'williamboman/mason.nvim',
   }
 
   -- for LSP autocompletion
@@ -47,10 +47,6 @@ local packer = require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
-
-  -- For vsnip users.
-  use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/vim-vsnip'
 
   -- TODO: prettify telescope vim, make it use regex & shorten the window
   -- telescope - searching / navigation
@@ -64,10 +60,6 @@ local packer = require('packer').startup(function(use)
         require('telescope').load_extension('live_grep_args')
     end
   }
- 
-  -- better hotfix window (for showing and searching through results in telescope's find usages)
-  -- TODO: learn how to use?
-  use {"kevinhwang91/nvim-bqf"}
 
   -- better highlighting
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -83,9 +75,6 @@ local packer = require('packer').startup(function(use)
 
   -- nice diagnostic pane on the bottom
   use 'folke/lsp-trouble.nvim'
-
-  -- support the missing lsp diagnostic colors
-  use 'folke/lsp-colors.nvim'
 
   -- better LSP UI (for code actions, rename etc.)
   use 'tami5/lspsaga.nvim'
@@ -104,12 +93,12 @@ local packer = require('packer').startup(function(use)
 end)
 
 -- plugin specific configs go here
+require('plugin-config/mason')
 require('plugin-config/nvim-cmp')
 require('plugin-config/telescope')
 require('plugin-config/nvim-tree')
 require('plugin-config/nvim-treesitter')
 require('plugin-config/barbar')
-require('plugin-config/lsp-colors')
 require('plugin-config/lsp-trouble')
 require('plugin-config/lspsaga')
 require('plugin-config/galaxyline')
