@@ -37,8 +37,9 @@ local packer = require('packer').startup(function(use)
 
   -- lsp config
   use {
-    'neovim/nvim-lspconfig',
-    'williamboman/mason.nvim',
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
   }
 
   -- for LSP autocompletion
