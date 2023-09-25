@@ -15,7 +15,9 @@ require("mason-lspconfig").setup {
 
 require'lspconfig'.lua_ls.setup{}
 require'lspconfig'.rust_analyzer.setup{}
-require'lspconfig'.bashls.setup{}
+require'lspconfig'.bashls.setup{
+    filetypes = { "sh", "zsh" };
+}
 require'lspconfig'.taplo.setup{}
 require'lspconfig'.dockerls.setup{}
 require'lspconfig'.docker_compose_language_service.setup{}
