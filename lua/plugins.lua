@@ -42,6 +42,9 @@ local packer = require('packer').startup(function(use)
     "neovim/nvim-lspconfig",
   }
 
+  -- this will enable LSP for neovim config
+  use "folke/neodev.nvim"
+
   -- for LSP autocompletion
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
