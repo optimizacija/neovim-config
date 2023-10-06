@@ -13,7 +13,10 @@ require'mason-lspconfig'.setup {
         'marksman',
         'rust_analyzer',
         'taplo',
-        'yamlls'
+        'yamlls',
+        'gopls',
+        'pyright',
+        'tsserver'
     },
 }
 
@@ -48,9 +51,15 @@ require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.taplo.setup{}
 require'lspconfig'.yamlls.setup{}
 
+-- TODO: DO NOT COMMIT, ONLY FOR MINIMAL USE
+require'lspconfig'.gopls.setup{}
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.tsserver.setup{}
+
 vim.api.nvim_create_augroup('MyJqGroup', {})
 vim.api.nvim_create_autocmd({'BufRead','BufNewFile'}, {
     group = 'MyJqGroup',
     pattern = {'*.jq'},
     command = 'set filetype=jq',
 })
+
