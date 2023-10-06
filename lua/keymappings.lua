@@ -65,8 +65,27 @@ vim.api.nvim_set_keymap('', '<C-w>č', '<C-w>l', opts)
 vim.api.nvim_set_keymap('', '<Leader><CR>', '<Cmd>silent !$TERM &<CR>', opts)
 
 -- jumping back and forth
-vim.api.nvim_set_keymap('', '<C-K>', '<C-O>', opts)
-vim.api.nvim_set_keymap('', '<C-L>', '<C-I>', opts)
+if vim.fn.has("mac") == 1 then
+  -- macOS specific mappings
+
+  -- These lines attempt to map Command-Shift-K & Command-Shift-L to back and forth jump actions
+  -- THIS WILL NOT WORK (because shortucts with Command key are not send from terminal to neavim)
+  -- vim.api.nvim_set_keymap('', '<D-S-K>', '<C-O>', opts)
+  -- vim.api.nvim_set_keymap('', '<D-S-L>', '<C-I>', opts)
+
+  -- Instead go to iterm2 and map the Command shortcuts directly to the jump actions
+  -- -> Command-Shift-K to \<C-O>
+  -- -> Command-Shift-L to \<C-P>
+  -- note the leading backslash \
+  -- guide: https://stackoverflow.com/a/63458243
+  -- 
+  -- Command-Shift-L cannot be directly mapped to <C-I>, because <C-I> behaves a bit wonkily
+  -- Instead, we map Command-Shift-L to an intermediate mapping like <C-P> that we do not use
+  vim.api.nvim_set_keymap('', '<C-P>', '<C-I>', opts)
+else
+  vim.api.nvim_set_keymap('', '<C-K>', '<C-O>', opts)
+  vim.api.nvim_set_keymap('', '<C-L>', '<C-I>', opts)
+end
 
 -- LSP
 vim.api.nvim_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
