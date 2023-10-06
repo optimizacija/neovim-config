@@ -69,11 +69,11 @@ if vim.fn.has("mac") == 1 then
   -- macOS specific mappings
 
   -- These lines attempt to map Command-Shift-K & Command-Shift-L to back and forth jump actions
-  -- THIS WILL NOT WORK (because shortucts with Command key are not send from terminal to neavim)
+  -- THIS WILL NOT WORK (because shortucts with Command key are not send from terminal to neovim)
   -- vim.api.nvim_set_keymap('', '<D-S-K>', '<C-O>', opts)
   -- vim.api.nvim_set_keymap('', '<D-S-L>', '<C-I>', opts)
 
-  -- Instead go to iterm2 and map the Command shortcuts directly to the jump actions
+  -- Instead go to iterm2 and map the Command shortcuts directly to actions
   -- -> Command-Shift-K to \<C-O>
   -- -> Command-Shift-L to \<C-P>
   -- note the leading backslash \
