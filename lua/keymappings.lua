@@ -10,6 +10,9 @@ local opts = { noremap = true, silent = true }
 -- paste in insert mode
 --vim.api.nvim_set_keymap('i', '<C-v>', '<Esc>"+pa', opts)
 
+-- delete without copy
+vim.api.nvim_set_keymap('', '<Leader>d', '"_d', opts)
+
 -- shift the movement keys by 0 to the right
 vim.api.nvim_set_keymap('', 'j', 'h', opts)
 vim.api.nvim_set_keymap('', 'k', 'j', opts)
