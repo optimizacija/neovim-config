@@ -24,6 +24,11 @@ autocmd FileChangedShellPost *
 ]])
 
 
+-- ================= Filetype detection ================= --
+
+vim.filetype.add({ extension = { wgsl = "wgsl" } })
+
+
 -- ================= Scrolling ================= --
 
 vim.o.scrolloff = 8 -- start scrolling when 8 lines away from margins

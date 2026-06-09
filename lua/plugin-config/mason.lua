@@ -12,6 +12,7 @@ require'mason-lspconfig'.setup {
         'lua_ls',
         'marksman',
         'rust_analyzer',
+        'wgsl_analyzer',
         'taplo',
         'yamlls'
     },
@@ -45,6 +46,7 @@ require'lspconfig'.lua_ls.setup{
 }
 require'lspconfig'.marksman.setup{}
 require'lspconfig'.rust_analyzer.setup{}
+require'lspconfig'.wgsl_analyzer.setup{}
 require'lspconfig'.taplo.setup{}
 require'lspconfig'.yamlls.setup{}
 
